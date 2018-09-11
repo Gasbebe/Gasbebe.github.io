@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Seja bem-vindo"
+title: "Shader Test"
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 image: 'http://res.cloudinary.com/dm7h7e8xj/image/upload/c_scale,w_760/v1504807239/morpheus_xdzgg1.jpg'
 category: 'blog'
@@ -8,20 +8,7 @@ twitter_text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 introduction: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 ---
 
-
-
-# Heading 1
-
-## Heading 2
-
-### Heading 3
-
-#### Heading 4
-
-Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-
-## Code
-
+#### Test
 Cum sociis natoque penatibus et magnis dis `code element` montes, nascetur ridiculus mus.
 
 ```cs
@@ -33,11 +20,11 @@ using System.Reflection;
 [InitializeOnLoad]
 public class HierarchyIcon
 {
-    static HierarchyIcon() { EditorApplication.hierarchyWindowItemOnGUI 							 += EvaluateIcons; }
+    static HierarchyIcon() { EditorApplication.hierarchyWindowItemOnGUI += EvaluateIcons; }
 
-    private static void EvaluateIcons(int instanceID, Rect 				      										  selectionRect)
+    private static void EvaluateIcons(int instanceID, Rect selectionRect)
     {
-        GameObject go = EditorUtility.InstanceIDToObject(instanceID) as 															 GameObject;
+        GameObject go = EditorUtility.InstanceIDToObject(instanceID) as GameObject;
         if (go == null) return;
 
         IHierarchyIcon slotCon = go.GetComponent<IHierarchyIcon>();
