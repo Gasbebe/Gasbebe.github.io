@@ -38,6 +38,10 @@ links:
     url: /about/
   - title : Shader
     url : /shader/
+  - title: Math
+    url : /Math/
+  - title : ETC
+    url : ETC
 
 # Exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']
