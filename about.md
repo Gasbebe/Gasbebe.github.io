@@ -5,7 +5,7 @@ description: Some description.
 permalink: /about/
 ---
 
-![https://github.com/Gasbebe/Gasbebe.github.io/blob/master/images/person.png]()
+![Alt text](https://github.com/Gasbebe/Gasbebe.github.io/blob/master/images/person.png)
 
 
 
