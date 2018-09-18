@@ -1,26 +1,33 @@
 ---
 layout: post
-title: "Shader Test"
-description: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-image: 'http://res.cloudinary.com/dm7h7e8xj/image/upload/c_scale,w_760/v1504807239/morpheus_xdzgg1.jpg'
+title: "Shader"
+description: 쉐이더 기본동작 원리
+image: '\images\bg.jpg'
 category: 'blog'
 tag:
  - Shader
-twitter_text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-introduction: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+introduction: 쉐이더 기본동작 원리
 ---
 
-# Shader PipeLine
+# 3D Graphics Rendering Pipeline
 
-# Vertex Shader
+![pipeline](\images\pipeline.png)
+
+# Vertex Shader(정점 쉐이더)
 
 ![vertex-shader-anim](\images\vertex-shader-anim.gif)
 
+**정점 쉐이더는 모델이 가지고 있는 정점에 갯수만큼 실행이 된다**
+
+
+
 **출처 : webglfundamentals.org**
 
-# Fragment Shader
+# Fragment Shader(프래그멘트 쉐이더)
 
 ![fragmentAnim](\images\fragmentAnim.gif)
+
+**정점 쉐이더로 변환된 좌표가 화면상에 잡힌 픽셀만큼 실행이된다**
 
 **출처 : webglfundamentals.org**
 
