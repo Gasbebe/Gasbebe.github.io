@@ -5,14 +5,25 @@ description: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 image: 'http://res.cloudinary.com/dm7h7e8xj/image/upload/c_scale,w_760/v1504807239/morpheus_xdzgg1.jpg'
 category: 'blog'
 tag:
- - ETC
  - Shader
 twitter_text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 introduction: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 ---
 
-#### Test
-Cum sociis natoque penatibus et magnis dis `code element` montes, nascetur ridiculus mus.
+# Shader PipeLine
+
+# Vertex Shader
+
+![vertex-shader-anim](\images\vertex-shader-anim.gif)
+
+**출처 : webglfundamentals.org**
+
+# Fragment Shader
+
+![fragmentAnim](\images\fragmentAnim.gif)
+
+**출처 : webglfundamentals.org**
+
 
 ```cs
 

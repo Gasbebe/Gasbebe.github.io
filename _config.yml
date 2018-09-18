@@ -41,7 +41,7 @@ links:
   - title: Math
     url : /Math/
   - title : ETC
-    url : ETC
+    url : /ETC
 
 # Exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']
