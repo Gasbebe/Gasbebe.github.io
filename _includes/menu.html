@@ -3,14 +3,9 @@
       <h2>Menu</h2>
       <ul>
         {% for link in site.links %}
-			{% if link.title == "ETC" %}
-				<li><a href="{{ site.url }}/tags/#etc">{{ link.title }}</a></li>
-			{% else if link.title == "Shader" %}
-				<li><a href="{{ site.url }}/tags/#shader">{{ link.title }}</a></li>
-			{% else %}
-				<li><a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
-			{% endif %}
+          <li><a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
         {% endfor %}
+        <li><a class="feed" href="{{ site.url }}{{site.baseurl}}/feed.xml" title="Atom/RSS feed">Feed</a></li>
       </ul>
     </nav>
 </aside>

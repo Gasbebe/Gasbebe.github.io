@@ -25,6 +25,8 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:title/
 
+
+
 # Plugins
 plugins:
   - jemoji
@@ -37,11 +39,11 @@ links:
   - title: About
     url: /about/
   - title : Shader
-    url : /shader/
+    url : /tags/#shader
   - title: Math
-    url : /Math/
+    url : /tags/#Math
   - title : ETC
-    url : /ETC
+    url : /tags/#ETC
 
 # Exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']
