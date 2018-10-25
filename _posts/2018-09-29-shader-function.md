@@ -25,9 +25,21 @@ abs, clamp, max, min, sign, step,
 
 
 
-acos, asin, atan, atan2, ceil, cos, cosh, exp, degress, exp2, floor, fmod, frac, frexp, isfinite, isinf, isnan,
+acos, asin, atan, atan2, 
 
-ldexp, log, log2, log10, modf, pow, round, rsprt, sin, sincos, sinh, smoothstep, sprt, tan, tanh,
+ceil(무조건 올림함수), 
+
+cos(코사인 값 반환),
+
+cosh, exp, degress, exp2, 
+
+floor(무조건 내림함수), fmod, 
+
+frac( 0~ 1사이의 수 반환), 
+
+frexp, isfinite, isinf, isnan,
+
+ldexp, log, log2, log10, modf, pow(제곱 함수), round(반올림 함수), rsprt, sin, sincos, sinh, smoothstep, sprt, tan, tanh,
 
 
 
@@ -51,7 +63,9 @@ determinant
 
 텍스쳐함수
 
-tex1D, tex2D, tex3D, texCUBE
+tex1D, tex2D(텍스처와 uv값을 넘기면 해당하는 rgba색상을 반환하는 함수), 
+
+tex3D, texCUBE 
 
 tex11 Dproj, tex2Dproj, tex3Dproj, texCUBEproj,
 
