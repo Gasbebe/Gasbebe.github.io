@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Shader"
+title: "02. 쉐이더 함수정리"
 description: 쉐이더 함수정리
 image: '\images\bg.jpg'
 category: 'Shader'
