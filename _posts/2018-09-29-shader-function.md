@@ -17,27 +17,47 @@ introduction: 쉐이더 함수정리
 
 수학함수
 
-lerp, radiams, saturate
+lerp(a,b, t) : 선형보간 함수 t는 0~1사의 값  0의 가까우면 a값에 가까워지고 1의 가까우면 b의 값의 가까워진다
 
+radiams, 
 
+saturate : 0 ~ 1 넘는 값을 잘라버리는 함수
 
-abs, clamp, max, min, sign, step,
+abs : 절대값을 반환하는 함수
 
+clamp, max, min, 
 
+sign : ??
 
-acos, asin, atan, atan2, 
+step(x,y) : x <= y 일때 1을 반환 아니면 0을 반환한다
 
-ceil(무조건 올림함수), 
+acos : 아크 코사인 함수
 
-cos(코사인 값 반환),
+asin : 아크 사인 함수
+
+atan : 아크 탄젠트 함수
+
+atan2 : ??
+
+ceil : 무조건 올림함수
+
+cos : 코사인 값 반환
 
 cosh, exp, degress, exp2, 
 
-floor(무조건 내림함수), fmod, 
+floor : 무조건 내림함수
 
-frac( 0~ 1사이의 수 반환), 
+fmod : 나눠서 실수부분 반환하는 함수
 
-frexp, isfinite, isinf, isnan,
+frac(x) : x의 소숫점 반환하는 함수 
+
+frexp : ??
+
+isfinite : ??
+
+isinf : ??
+
+isnan : ??
 
 ldexp, log, log2, log10, modf, pow(제곱 함수), round(반올림 함수), rsprt, sin, sincos, sinh, smoothstep, sprt, tan, tanh,
 
@@ -45,11 +65,21 @@ ldexp, log, log2, log10, modf, pow(제곱 함수), round(반올림 함수), rspr
 
 벡터함수
 
-dot, reflect
+dot : 내적 함수
 
-all, any, cross, faceforward
+reflect : 반사벡터를 구하는 함수
 
-distance, length, lit, normalize, refract
+all, any, 
+
+cross : 외적함수
+
+faceforward
+
+distance, length, lit, 
+
+normalize : 정규화 함수
+
+refract
 
 
 
@@ -57,7 +87,7 @@ distance, length, lit, normalize, refract
 
 mul, transpose
 
-determinant
+determinant : 행렬
 
 
 
