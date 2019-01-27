@@ -30,6 +30,7 @@ permalink: /:title/
 # Plugins
 plugins:
   - jemoji
+  - mathjax
 
 # Links to include in menu navigation
 # For external links add external: true
