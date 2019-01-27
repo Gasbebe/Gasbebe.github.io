@@ -31,11 +31,11 @@ sign : ??
 
 step(x,y) : x <= y 일때 1을 반환 아니면 0을 반환한다
 
-acos : 아크 코사인 함수
+acos : 아크 코사인 함수 각도를 구할때 많이씀
 
-asin : 아크 사인 함수
+asin : 아크 사인 함수 각도를 구할때 많이씀
 
-atan : 아크 탄젠트 함수
+atan : 아크 탄젠트 함수 각도를 구할때 많이씀
 
 atan2 : ??
 
@@ -73,9 +73,13 @@ all, any,
 
 cross : 외적함수
 
-faceforward
+faceforward : 표면에서 노말벡터
 
-distance, length, lit, 
+distance : 거리함수
+
+length : 길이?
+
+ lit, 
 
 normalize : 정규화 함수
 
@@ -85,7 +89,9 @@ refract
 
 행렬함수
 
-mul, transpose
+mul : 행렬곱셈함수
+
+transpose
 
 determinant : 행렬
 
