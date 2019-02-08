@@ -96,7 +96,6 @@ Shader "Custom/Rain" {
 
 
 
-![](\images\2019-02-08\RainPattern_normal.tga)
+![](\images\2019-02-08\RainPattern_normal.png)
 
-![](\images\2019-02-08\RainPattern_basecolor.tga)
-
+![](\images\2019-02-08\RainPattern_basecolor.png)
