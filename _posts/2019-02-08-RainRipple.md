@@ -96,7 +96,7 @@ Shader "Custom/Rain" {
 
 
 
-![gg](\images\2019-02-08\rain.png)
+![rain](\images\2019-02-08\rain.png)
 
-![ggg](\images\2019-02-08\rain2.png)
+![rain2](\images\2019-02-08\rain2.png)
 
