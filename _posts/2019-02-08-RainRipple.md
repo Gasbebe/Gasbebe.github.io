@@ -94,9 +94,8 @@ Shader "Custom/Rain" {
 
 ```
 
-
-
 ![rain](\images\rain.png)
 
 ![rain2](\images\rain2.png)
 
+![rainripple](\images\rainripple.gif)
