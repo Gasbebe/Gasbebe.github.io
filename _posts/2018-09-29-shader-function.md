@@ -370,10 +370,8 @@ round(5.6) // 6
 
  sin(x) : 사인 각도에 따른 라디안 값 반환
 
-```c++
-sin(0) // 0
-sin(45) // 1
-sin(90) // 0
+```
+
 ```
 
 ---
@@ -430,19 +428,13 @@ dot(v1, v2) // v1(1,0,0), v2(-1,0,0)  output = -1
 
 reflect : 반사벡터를 구하는 함수
 
-```c++
-reflect(float3(1,1,1));
+```
+
 ```
 
 ---
 
-all : 스칼라 값 또는 boolean 벡터의 모든 컴포넌트들이 `true`
-
-```c++
-bool all(bool a)
-```
-
-
+all
 
 ---
 
@@ -466,13 +458,7 @@ length : 길이?
 
 ---
 
- lit : 
-
-```c++
-float4 lit(float Ndotl, float NdotH, float m)
-```
-
-
+ lit
 
 ---
 
@@ -490,9 +476,9 @@ refract
 
 mul : 행렬곱셈함수
 
-transpose : 전치행렬
+transpose
 
-determinant : 행렬식
+determinant : 행렬
 
 
 
@@ -536,4 +522,9 @@ POSITION, NORMAL
 
 ![](\images\CookTorrance.png)
 
-동차좌표, 호머지뉴어스, 클립스페이스 = ndc공간
+
+
+
+
+
+
