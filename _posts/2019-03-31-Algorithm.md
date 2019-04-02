@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "빗물 효과"
-description: 빗물 효과
+title: "알고리즘 연습"
+description: 알고리즘
 image: '\images\bg.jpg'
 category: 'Algorithm'
 tag:
