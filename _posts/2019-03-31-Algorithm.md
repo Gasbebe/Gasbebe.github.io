@@ -3,9 +3,9 @@ layout: post
 title: "빗물 효과"
 description: 빗물 효과
 image: '\images\bg.jpg'
-category: 'Algorithsm'
+category: 'Algorithm'
 tag:
- - Algorithsm
+ - Algorithm
 introduction: 알고리즘 연습
 ---
 
