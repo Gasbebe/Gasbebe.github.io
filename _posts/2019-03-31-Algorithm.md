@@ -81,3 +81,286 @@ int solution(int n) {
 ```
 
 dfs : stack bfs : queue
+
+# 문자열 매칭
+
+```c++
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int findString(string parent, string pattern){
+    int parentSize = parent.size;
+    int patternSize = pattern.size;
+    
+    //O(n^2)
+    for(int i = 0; i <= parentSize - patterntSize; i++){
+        for(int j = 0 j < i; j++){
+            if(parent[i+j] != pattern[j]){
+                finded = false;
+                break;
+            }
+        }
+        if(finded){
+            return i;
+        }
+    }
+}
+int main(void){
+    
+}
+```
+
+
+
+
+
+
+
+```c++
+#include <iostream>
+#include <stack>
+
+using namespace std;
+
+int n, S[1000000];
+
+void swap(int a, int b){
+    int temp = S[a];
+    S[a] = S[b];
+    S[b] = t;
+}
+//오름차순의 경우
+bool compare(int a, int b){
+    return a<b;
+}
+
+//내림차순의 경우
+bool compare(int a, int b){
+    return a>b;
+}
+
+//구조체
+bool compare(Point a, Point b){
+    return a.x < b.x;
+}
+
+//구조체
+bool compare(Point a, Point b){
+    if(a.x == b.x) return a.y < b.y;
+    else return a.x < b.x;
+}
+
+void main(){
+ return;    
+}
+```
+
+
+
+# 탐색기반
+
+선형구조, 비선형구조 low_bound, uper_bound, 
+
+비선형구조란 i번째 원소를 탐색한 다음 그 원소와 연결된 다른 원소를 탐색하려고 할때 열거개의 원소가 존재하는 탐색구조를 말한다 일반적으로 자료가 트리나 그래프로 구성되어 있을 경우를 비선형구조라 하고 이러한 트리나 그래프의 모든 정점을 탐색하는 것을 비선형 탐색이라고 이해하면 된다
+
+```c++
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespce std;
+class Node{
+    int data;
+}
+
+class BinaryTree{
+    int value;
+    Node *leftNode;
+    Node *rightNode;
+    
+    public:
+    	void PreOrder(){
+        	
+    	}
+    
+    	void PostOrder(){
+        
+	    }
+}
+```
+
+
+
+DP
+
+brute force approcach  모든 경우
+
+divide and Conquer approach 모든 문제를 쪼개서 해결 - 문제가 독립적일때
+
+dynamic programming approach 동적계획법 - 주어진 문제를 하위로 나눠어서 해결
+
+동적 프로그래밍은 문제를 작은 문제로 쪼개서 푼다는 의미에서 divide and conquer와 비슷하지만
+
+하위 문제가 서로 종속성을 가질 때 사용
+
+- 가능한 해답이 무수히 존재하며
+- 각각의 해답은 숫자 등의 크기가 있는 값을 가짐
+- 가장 크거나 가장 작은 최적의 값을 가지는 해답을 찾을 수 있고.
+- 그런 해답을 최적화 문제의 `최적해` 라고 부름
+
+다이나믹 프로그래밍 단계
+
+1. 최적해에 대한 구조적 특징 분석
+2. 최적해를 값을 구하기 위한 재귀적 정의가 가능한지 확인
+3. 하위문제로 부터 최적해의 값을 계산
+4. 계산된 값으로 부터 최적해를 만듦
+
+문제해결방법으로 최적화 문제를 해결할 때 문제의 크기를 작게 나누어서 해답을 찾으며 이떄 작은 문제들은 서로 연관성을 가진다. 동적계획법을 적용하기 위해서는 최적해 구조와 재귀 구조를 가져야함
+
+조립을 통해 제품이 완성될 때 여러 개의 과정과 여러 개의 라인이 존재할 때 최적의 조합을 찾아 가장 빠른 시간과 경로를 동적계획법을 이용하여 해결
+
+
+
+
+
+greedy approach
+
+BFS
+
+그래프
+
+```c++
+#include<iostream>
+#include<queue>
+#include<vector>
+
+using namespace std;
+
+int number = 7;
+int checked[7];
+vector<int> a[8];
+
+void bfs(int start){
+    queue<int> q;
+  	q.push(start);
+    checked[start] = true;
+    while(!q.empty()){
+        int x = q.front();
+        q.pop();
+        printf("%d", x);
+        for(int i= 0; i < a[x].size(); i++){
+            int y = a[x][i];
+            if(!checked[y]){
+                q.push(y);
+                checked[y] = true;
+            }
+        }
+    }
+}
+/*
+     1
+    / \
+    2-3
+   /\  /\
+   4-5 6-7
+   1->2->3->4->5->6->7
+*/
+int main(void){
+    
+    a[1].push_back(2);
+    a[2].push_back(1);
+    
+    a[1].push_back(3);
+    a[3].push_back(1);
+    
+    a[3].push_back(2);
+    
+    a[2].push_back(4); 
+    a[4].push_back(2);
+    
+    a[2].push_back(5);
+    a[5].push_back(2);
+    
+    a[4].push_back(5);
+    a[5].push_back(4);
+    
+    a[3].push_back(6);
+    a[6].push_back(3);
+    
+    a[3].push_back(7);
+    a[7].push_back(3);
+    
+    a[6].push_back(7);
+    a[7].push_back(6);
+    
+    bfs(1);
+    return 0;
+}
+```
+
+
+
+dfs(재귀, 스택)
+
+```c++
+#include<iostream>
+#include<vector>
+#include<algorithm>
+#include<stack>
+#include<vector>
+
+using namespace std;
+
+int number = 7;
+int checked[7];
+vector<int> a[8];
+
+void dfs(int start){
+    stack<int> s;
+    s.push(start);
+    
+    while(!s.empty()){
+        int d = s.top();
+        s.pop();
+        
+        for(int i = 0; i < a[x].size(); i++){
+            
+        }
+    }
+}
+
+/*
+     1
+    / \
+    2-3
+   /\  /\
+   4-5 6-7
+   1->2->4->5->3->6->7
+*/
+int main(){
+    
+}
+```
+
+
+
+
+
+```c++
+//연습
+
+bool compare(int a, int b){
+    return a > b;
+}
+
+bool compare(int a ,int b){
+    return a < b;
+}
+
+bool compare(Postion p1, Position p2){
+    return p1.x > p2.x;
+}
+```
+
