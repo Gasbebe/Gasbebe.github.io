@@ -275,6 +275,7 @@ int main(void){
     a[1].push_back(3);
     a[3].push_back(1);
     
+    a[2].push_back(3);
     a[3].push_back(2);
     
     a[2].push_back(4); 
@@ -304,6 +305,9 @@ int main(void){
 
 dfs(재귀, 스택)
 
+1. 스택의 최상단 노드를 확입하니다.
+2. 최상단 노드에게 방문하지 않은 인접 노드가 있으면 그 노드를 스택에 넣고 방문처리합니다. 방문하지 않은 인접 노드가 없으면 스택에서 최상단 노드를 뺍니다 
+
 ```c++
 #include<iostream>
 #include<vector>
@@ -317,6 +321,15 @@ int number = 7;
 int checked[7];
 vector<int> a[8];
 
+void RecursionDfs(int x){
+    if(checked[x]) return;
+    checked[x] = true;
+    cout << x << ' ';
+    for(int i = 0; i< a[x].size(); i++){
+        int y = a[x][i];
+        dfs(y);
+    }
+}
 void dfs(int start){
     stack<int> s;
     s.push(start);
@@ -337,7 +350,7 @@ void dfs(int start){
     2-3
    /\  /\
    4-5 6-7
-   1->2->4->5->3->6->7
+   1->2->3->6->7->4->5   
 */
 int main(){
     
@@ -362,5 +375,37 @@ bool compare(int a ,int b){
 bool compare(Postion p1, Position p2){
     return p1.x > p2.x;
 }
+```
+
+
+
+## Union find
+
+활용도가 높은 알고리즘, 크루스칼 알고리즘에도 쓰임
+
+```c++
+#inclued <iostream>
+
+int getParent(int parent[], int x){
+    if(parent[x] == x) return x;
+    return parent[x] = getParent(parent, parent[x]);
+}
+
+int unionParent(int parent[], int a, int b){
+    a = getParent(parent, a);
+    b = getParent(parent, b);
+    
+    if(a < b) parent[b] = a;
+    else parent[a] = b;
+}
+
+int findParent(int parent[], int a, int b){
+    a = getParent(parent, a);
+    b = getParent(parent, b);
+    
+    if(a == b) return 1;
+    else return 0;
+}
+
 ```
 
