@@ -409,3 +409,162 @@ int findParent(int parent[], int a, int b){
 
 ```
 
+
+
+1. preoder traversal
+   1. 먼저 자기 자신을 처리한다.
+   2. 왼쪽 자식을 방문합니다.
+   3. 오른쪽 자식을 방문합니다.
+2. inorder traversal
+   1. 왼쪽 자식을 방문 합니다
+   2. 먼저 자기자신을 처리합니다
+   3. 오른쪽 자식을 방문합니다
+3. postorder traversal
+   1. 왼쪽 자식을 방문합니다
+   2. 오른쪽 자식을 방문합니다
+   3. 자기 자신을 처리합니다
+
+
+
+```c++
+#include <iostream>
+#include <vector>
+
+using namespace std;
+//다익스트라 알고리즘, 흔히 인공위성, GPS 많이 쓰입니다.
+//다이나믹, 그리드 알고리즘으로 분류 된다.
+//1 출발 노드를 설정합니다.
+//2 출발 노드를 기준으로 각 노드의 최소 비용을 저장합니다.
+//3 방문하지 않은 노드 중에서 가장 비용이 적은 노드를 선택합니다.
+//4 해당 노드를 거쳐서 특정한 노드로 가느 경우를 고려하여 최소 비용을 갱신합니다.
+//5 위 과정에서 3번 ~ 4번을 반복합니다.
+
+//2차원 배열사용 특정 행에서 열로 가는 비용
+int INF = 9999;
+int number = 6;
+
+int a[6][6] ={
+    {0,2,5,1,INF,INF},
+    {2,0,3,2,INF,INF},
+    {5,3,0,3,1,5},
+    {1,2,3,0,1,INF},
+    {INF,INF,1,1,0,2},
+    {INF,INF,5,INF,2,0}
+};
+
+bool v[6]; //방문한 노드
+int d[6]; //최단거리
+//가장 최소 거리를 가지는 정점을 반환합니다.
+int getSmallIndex(){
+    int min = INF;
+    int index = 0;
+    for(int i = 0; i < number; i++){
+        if(d[i] < min && !v[i]){
+            min = d[i];
+            index = i;
+        }
+    }
+    return index;
+}
+
+void dijkstra(int start){
+    for(int i = 0; i < number; i++){
+        d[i] = a[start][i];
+    }
+    v[start] = true;
+    for(int i = 0; i< number -2; i++){
+        for(int j= 0; j <6; j++){
+            
+        }
+    }
+}
+int main(){
+    dijkstra(1);
+    
+    for(int i = 0; i < 6; i++){
+        cout << d[i] << endl;
+    }
+}
+
+```
+
+
+
+---
+
+길이가 n인 배열에 1부터 n까지 숫자가 중복 없이 한 번씩 들어 있는지를 확인하려고 합니다.
+1부터 n까지 숫자가 중복 없이 한 번씩 들어 있는 경우 true를, 아닌 경우 false를 반환하도록 함수 solution을 완성해주세요.
+
+##### 제한사항
+
+- 배열의 길이는 10만 이하입니다.
+- 배열의 원소는 0 이상 10만 이하인 정수입니다.
+
+```c++
+#include <vector>
+#include <iostream>
+using namespace std;
+int number[100001];
+bool solution(vector<int> arr)
+{
+    bool answer = true;
+    for(int i = 0; i < arr.size(); i++){
+        number[arr[i]] = arr[i];
+    }
+    
+    for(int i = 1; i < arr.size(); i++){
+        if(number[i] == 0){
+          return answer = false;
+        }
+    }
+    return answer;
+}
+//==== solution2
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+bool solution(vector<int> arr)
+{
+    bool answer = true;
+	sort(arr.begin(), arr.end());
+    
+    for(int i  =0; i < arr.size(); ++i){
+        if(arr[i] != i+1){
+            return false;
+        }
+    }
+    
+    return true;
+}
+```
+
+
+
+
+
+# 자릿수 더하기
+
+```c++
+while(n != 0){
+            sum += (n % 10);
+            n = n/10;
+}
+```
+
+
+
+# 숫자 뒤집기
+
+```
+   public static int flip(int num){
+        int result=0;
+        while(num!=0){
+            result= result * 10 + num % 10;
+            num /= 10;
+        }
+        return result;
+    }
+```
+
